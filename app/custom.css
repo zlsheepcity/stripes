@@ -3,6 +3,7 @@
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 
     [display-block] {display:block}
+    [ratio-v] {aspect-ratio:1080/1774}
 
 /** headers **/
 
