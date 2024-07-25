@@ -2,12 +2,23 @@
 /** customcss **/
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 
+/** headers **/
+
+    .GalleryTitle {
+        padding: 0.75em 1em 0.25em 1em;
+    }
+    header.GalleryTitle a[href] {
+        text-decoration: none;
+    }
+
+/** grids **/
+
     .AutoFitGrid {
         display: grid;
         grid-gap: 1em;
         grid-template-columns: repeat(auto-fit, minmax(min(424px,100%), 1fr));
     }
-    .AutoFitGrid a {
+    .AutoFitGrid a[href] {
         display: block;
     }
     .AutoFitGrid img {
