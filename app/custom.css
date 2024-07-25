@@ -2,6 +2,8 @@
 /** customcss **/
 /** ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 
+    [display-block] {display:block}
+
 /** headers **/
 
     .GalleryTitle {
@@ -9,6 +11,30 @@
     }
     header.GalleryTitle a[href] {
         text-decoration: none;
+    }
+
+/** text content **/
+
+    .TextSection h1 {
+      --max-width: 100%;
+        max-width: var(--max-width);
+        font-size: clamp(1.25rem, 5vw, 2.5rem);
+        line-height: 1;
+    }
+    .TextSection h1 a {
+        text-decoration: none;
+    }
+    .TextSection h1 a:hover {
+        color: var(--link-color, inherit);
+    }
+    .TextSection h1+p {
+        padding-top: 0.5em;
+    }
+    .TextSection p {
+        line-height: 1.25;
+    }
+    .TextSection p:not(:last-child) {
+        padding-bottom: 0.5em;
     }
 
 /** grids **/
@@ -24,3 +50,50 @@
     .AutoFitGrid img {
         aspect-ratio: 1080/1774;
     }
+
+    .ChapterCard {
+      --background-color: var(--back-color);
+      --color:            var(--text-color);
+        background-color: var(--background-color);
+        color:            var(--color);
+    }
+    .ChapterCardGrid {
+        display: grid;
+        padding:  1em;
+        grid-gap: 1em;
+        max-width: min(42em, 100vh);
+        align-items: end;
+        grid-template-columns: 1080fr 1774fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+            "cover title"
+            "cover items"
+            ;
+    }
+    .ChapterCardGrid >figure  { grid-area: cover; }
+    .ChapterCardGrid >header  { grid-area: title; }
+    .ChapterCardGrid >section { grid-area: items; }
+
+    .ChapterCardGrid >figure {
+        background-color: white;
+        align-self: stretch;
+    }
+
+.StripesInRowList {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+.StripesInRowItem {
+    display:  grid;
+    place-items: center;
+    padding: 0.25em;
+    width: 20%;
+    text-decoration: none;
+}
+.StripesInRowItem .text {
+    font-size: 1.5em;
+}
+.StripesInRowItem:hover {
+    background-color: var(--link-color, rgba(255,255,255,0.255));
+}
