@@ -242,12 +242,12 @@ body {
       --back-color-more:  hsl(204, 26%, 50%);
       --back-color-less:  hsl(204, 18%, 58%);
 
-      --text-color:       hsl(226, 15%, 12%); /* NobleBlack */
-      --text-color-more:  hsl(212, 34%, 29%); /* NobleSea */
-      --text-color-less:  hsl(226, 17%, 20%); /* NobleNight */
+      --text-color:       hsl(  0,  0%,100%);
+      --text-color-more:  hsl(  0,  0%,100%);
+      --text-color-less:  hsl(  0,  0%, 90%);
 
-      --link-color:       hsl(359, 54%, 53%); /* NobleAccent */
-      --link-color-more:  hsl(359, 59%, 43%); /* NobleAction */
+      --link-color:       hsl(359, 54%, 73%); /* NobleAccent */
+      --link-color-more:  hsl(359, 59%, 63%); /* NobleAction */
       --link-color-text:  white;
     }
 
